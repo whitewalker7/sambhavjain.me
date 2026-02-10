@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Personal AI Agent - Sambhav Jain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #fafafa;
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        
+        .container {
+            max-width: 650px;
+            width: 100%;
+        }
+        
+        .back {
+            color: #666;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        
+        .back:hover {
+            color: #333;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .date {
+            color: #999;
+            margin-bottom: 2rem;
+        }
+        
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .content h2 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        
+        .content pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">← back</a>
+        
+        <h1>Building a Personal AI Agent</h1>
+        <p class="date">February 2026</p>
+        
+        <div class="content">
+            <p>
+                I spent a weekend building a personal AI agent that searches for jobs, drafts emails, 
+                and keeps me informed via WhatsApp. Here's what I learned.
+            </p>
+            
+            <h2>The Setup</h2>
+            <p>
+                I used n8n (self-hosted workflow automation) running on a mini PC. The stack:
+            </p>
+            <ul>
+                <li>n8n for orchestration</li>
+                <li>Ollama for local LLM inference</li>
+                <li>PostgreSQL for persistence</li>
+                <li>Cloudflare Tunnel for external access</li>
+                <li>Twilio for WhatsApp integration</li>
+            </ul>
+            
+            <h2>What Worked</h2>
+            <p>
+                The agent can search multiple job APIs, aggregate results, and let me interact 
+                conversationally. "Find me senior AI roles in Europe" actually works.
+            </p>
+            <p>
+                Email drafting with approval flow is nice. The agent drafts, I review in chat, 
+                say "send it" and it goes.
+            </p>
+            
+            <h2>What Didn't</h2>
+            <p>
+                Mass job applications are low ROI. The real value is in targeted outreach—finding 
+                companies I actually want to work for, finding the right people, and crafting 
+                personalized messages.
+            </p>
+            <p>
+                Also, local LLMs (7B params) struggle with complex tool calling. Cloud APIs 
+                (Gemini, Groq) are more reliable for agentic workflows.
+            </p>
+            
+            <h2>Takeaway</h2>
+            <p>
+                Building is learning. Even if this agent never lands me a job, I understand 
+                agentic architectures better now. That's the point.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
